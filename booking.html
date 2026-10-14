@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #bg-vedio {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+    </style>
+    <link rel="stylesheet" href="./fontawesome-free-5.15.4-web/css/all.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <i class="fas fa-bars menu-toggle" id="menu-toggle"></i>
+            <ul id="navigation">
+                <li class="logo">ETHIOPIA</li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="destination.html">Destination</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <video autoplay muted loop id="bg-vedio">
+            <source src="Booking.mp4" type="video/mp4">
+        </video>
+        <h1 class="heading-book">
+            <span>B</span>
+            <span>O</span>
+            <span>O</span>
+            <span>K</span>
+            <span class="space"></span>
+            <span>N</span>
+            <span>O</span>
+            <span>W</span>
+        </h1>
+        <div class="booking-container">
+            <form id="bookingform">
+                <label for="destination">Destination</label>
+                <p><select size="1">
+                    <option>Aksum</option>
+                    <option>Gonder</option>
+                    <option>Harar Jagol</option>
+                    <option>Simien Mountains</option>
+                    <option>Konso</option>
+                    <option>Omo valley</option>
+                    <option>Gorgora Eco Resort</option>
+                    <option>Halla Kella</option>
+                    <option>lalibela</option>
+                    <option>Bale Mountains</option>
+                    <option>Jimma(Abba Jifar Palace)</option>
+                    <option>Blue Nile Falls</option>
+                    <option>Lake Tana</option>
+                    <option>Denakil Depression</option>
+                    <option>Sof Ommar Caves</option>
+                </select></p>
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Name" required><br>
+                <label for="question">Group/Individual</label>
+                <input type="radio" id="question" name="question" >Group
+                <input type="radio" id="question" name="question">Individual<br>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="email@example.com" required><br>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Phone" required><br>
+                <label for="date">Travel Date</label>
+                <input type="date" id="date" name="date" required><br>
+                <div class="button-group">
+                    <button type="submit">Confirm Booking</button>
+                    <button type="reset" value="reset">Reset</button>
+                </div>
+            </form>
+        </div>
+        <div id="confirmation">
+
+        </div>
+    </main>
+   
+    <script src="script.js"></script>
+    <script src="booking.js"></script>
+</body>
+
+</html>
